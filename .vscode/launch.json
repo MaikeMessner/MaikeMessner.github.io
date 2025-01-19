@@ -4,6 +4,13 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Install/update dependencies",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["install"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Start server",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"]
