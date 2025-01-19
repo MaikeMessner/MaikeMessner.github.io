@@ -1,5 +1,11 @@
 {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
-    "editor.comments.insertSpace": true
+    "editor.comments.insertSpace": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.run": "onType",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
 }
