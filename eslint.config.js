@@ -1,13 +1,11 @@
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
-import jsPlugin from "@eslint/js";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import jsonPlugin from "eslint-plugin-json";
 import eslintPluginImport from "eslint-plugin-import";
 
 export default [
-  jsPlugin.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
   ...pluginVue.configs["flat/recommended"],
@@ -15,6 +13,14 @@ export default [
   eslintPluginPrettierRecommended,
   eslintPluginImport.flatConfigs.recommended,
   eslintPluginImport.flatConfigs.typescript,
+  {
+    "settings": {
+      "import/resolver": {
+        "typescript": true,
+        "node": true,
+      },
+    },
+  },
   {
     ignores: ["dist"],
   },
@@ -25,6 +31,7 @@ export default [
   {
     languageOptions: {
       globals: {
+        // eslint-disable-next-line no-undef
         ...global.browser,
       },
     },
