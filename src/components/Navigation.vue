@@ -97,7 +97,14 @@
 </template>
 
 <script lang="ts">
+  import ButtonRouterLink from './ButtonRouterLink.vue';
+
   export default {
+    components: {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      ButtonRouterLink
+    },
+
     data() {
       return {
         navigationFilterOptions: [

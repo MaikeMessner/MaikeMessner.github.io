@@ -17,7 +17,6 @@ import vMasonry from "./directives/masonry";
 import vHtmlSlot from "./directives/htmlSlot";
 import { setTitle } from "./state/title";
 import { router } from "./router";
-import ButtonRouterLink from "./components/ButtonRouterLink.vue";
 
 // eslint-disable-next-line import/no-named-as-default-member
 const i18NextInitialized = i18next
@@ -56,7 +55,6 @@ i18NextInitialized
       .use(I18NextVue, { i18next })
       .directive("masonry", vMasonry)
       .directive("html-slot", vHtmlSlot)
-      .component("ButtonRouterLink", ButtonRouterLink)
       .mount("#app");
   })
   .catch((err) => console.error(err));
