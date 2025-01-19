@@ -108,14 +108,14 @@
             translationKey: "header:motion",
             tag: "motion",
           },
-          {
-            translationKey: "header:design",
-            tag: "design",
-          },
-          {
-            translationKey: "header:graphicUx",
-            tag: "graphicUx",
-          },
+          // {
+          //   translationKey: "header:design",
+          //   tag: "design",
+          // },
+          // {
+          //   translationKey: "header:graphicUx",
+          //   tag: "graphicUx",
+          // },
         ],
         languages: {
           de: "DE",
