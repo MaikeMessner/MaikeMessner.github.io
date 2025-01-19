@@ -2,16 +2,16 @@
   <footer class="my-4">
     <div class="container-fluid containerpadding footermargin">
       <div
-        class="row mb-2 justify-content-center justify-content-md-start align-items-start"
+        class="row mb-2 justify-content-center justify-content-md-start align-items-center align-items-md-start"
       >
-        <div class="col-5 col-sm-2 p-2">
+        <div class="col-4 col-md-1 p-2">
           <img
-            class="w-75"
+            class="w-100"
             :src="leaves.src"
             :alt="leaves.alt"
           />
         </div>
-        <div class="col-12 col-sm-4">
+        <div class="col-12 col-md-6">
           <span class="fw-regular footertext">{{
             $t("header:usageNote")
           }}</span>
@@ -20,7 +20,7 @@
       <div
         class="d-flex flex-wrap flex-column flex-md-row gap-2 align-items-center align-items-md-start"
       >
-        <div class="offset-md-2 text-nowrap footertext mb-4">
+        <div class="offset-md-1 text-nowrap footertext mb-4">
           <div>
             <span>&#169; Maike Meßner {{ currentYear }}</span>
           </div>
