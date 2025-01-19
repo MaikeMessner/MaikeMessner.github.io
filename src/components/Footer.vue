@@ -7,8 +7,8 @@
         <div class="col-4 col-md-1 p-2">
           <img
             class="w-100"
-            :src="leaves.src"
-            :alt="leaves.alt"
+            :src="sheets.src"
+            :alt="sheets.alt"
           />
         </div>
         <div class="col-12 col-md-4">
@@ -66,7 +66,7 @@
     data() {
       return {
         currentYear: new Date().getUTCFullYear(),
-        leaves: {
+        sheets: {
           src: new URL("../assets/img/Blaetter.png", import.meta.url).href,
           alt: t("header:alt:leaves"),
         },
