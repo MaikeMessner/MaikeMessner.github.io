@@ -56,7 +56,7 @@
                 :to="{ name: 'home', params: { filter: item.tag } }"
                 class="nav-link navtext text-nowrap"
                 active-class="active"
-                data-bs-toggle="offcanvas"
+                data-bs-dismiss="offcanvas"
                 data-bs-target="#navbarSupportedContent"
               >
                 {{ $t(item.translationKey) }}
@@ -65,7 +65,7 @@
                 class="nav-link navtext nav-item"
                 active-class="active"
                 :to="{ name: 'about' }"
-                data-bs-toggle="offcanvas"
+                data-bs-dismiss="offcanvas"
                 data-bs-target="#navbarSupportedContent"
               >
                 {{ $t("header:about") }}
@@ -97,12 +97,12 @@
 </template>
 
 <script lang="ts">
-  import ButtonRouterLink from './ButtonRouterLink.vue';
+  import ButtonRouterLink from "./ButtonRouterLink.vue";
 
   export default {
     components: {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      ButtonRouterLink
+      ButtonRouterLink,
     },
 
     data() {
