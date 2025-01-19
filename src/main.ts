@@ -4,24 +4,19 @@ import "./styles/bootstrap-overrides.scss";
 import "./styles/global.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import {
-  createRouter,
-  createWebHistory,
-  isNavigationFailure,
-} from "vue-router";
 import { createApp } from "vue";
 
 import I18NextVue from "i18next-vue";
-import i18next, { hasLoadedNamespace, loadNamespaces } from "i18next";
+import i18next from "i18next";
 import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
 import I18NextHttpBackend from "i18next-http-backend";
 import I18NextChainedBackend from "i18next-chained-backend";
 import I18NextLocalStorageBackend from "i18next-localstorage-backend";
 import App from "./App.vue";
-import { routes } from "./routes";
 import vMasonry from "./directives/masonry";
 import vHtmlSlot from "./directives/htmlSlot";
-import { setTitle, titleInfo } from "./state/title";
+import { setTitle } from "./state/title";
+import { router } from "./router";
 
 // eslint-disable-next-line import/no-named-as-default-member
 const i18NextInitialized = i18next
@@ -49,30 +44,6 @@ const i18NextInitialized = i18next
       ],
     },
   });
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
-});
-router.beforeEach(async (to) => {
-  await Promise.all(
-    ((to.meta.i18nextNs as string[]) || []).map(async (ns) => {
-      if (!hasLoadedNamespace(ns)) {
-        await loadNamespaces(ns);
-      }
-    }),
-  );
-});
-
-router.afterEach((to, _, failure) => {
-  if (isNavigationFailure(failure)) {
-    titleInfo.title = undefined;
-    titleInfo.titleKey = undefined;
-  }
-
-  titleInfo.titleKey = (to.meta?.titleKey as string) ?? undefined;
-  titleInfo.title = (to.meta?.title as string) ?? undefined;
-});
 
 i18NextInitialized
   .then(() => {
