@@ -33,7 +33,10 @@
             >{{ $t("header:contact") }}</RouterLink
           >
         </div>
-        <div class="text-nowrap">
+        <div
+          v-if="false"
+          class="text-nowrap"
+        >
           <RouterLink
             class="link-primary link-underline-opacity-0 footertext"
             :to="{ name: 'imprint' }"
