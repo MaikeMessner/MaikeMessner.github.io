@@ -50,21 +50,26 @@
             class="d-flex align-items-center justify-content-xxl-between flex-xxl-row justify-content-center flex-column gap-2 w-100 h-min-100 h-fit-content"
           >
             <div class="navbar-nav d-flex align-items-center gap-2">
-              <RouterLink
+              <ButtonRouterLink
                 v-for="item in navigationFilterOptions"
                 :key="item.tag"
                 :to="{ name: 'home', params: { filter: item.tag } }"
                 class="nav-link navtext text-nowrap"
                 active-class="active"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#navbarSupportedContent"
               >
                 {{ $t(item.translationKey) }}
-              </RouterLink>
-              <RouterLink
+              </ButtonRouterLink>
+              <ButtonRouterLink
                 class="nav-link navtext nav-item"
                 active-class="active"
                 :to="{ name: 'about' }"
-                >{{ $t("header:about") }}</RouterLink
+                data-bs-toggle="offcanvas"
+                data-bs-target="#navbarSupportedContent"
               >
+                {{ $t("header:about") }}
+              </ButtonRouterLink>
             </div>
             <div
               class="navbar-nav navausrichtung d-flex align-items-center gap-2 mt-5 mt-xxl-0"
