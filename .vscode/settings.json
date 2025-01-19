@@ -6,6 +6,6 @@
   "eslint.lintTask.enable": true,
   "eslint.run": "onType",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   }
 }
