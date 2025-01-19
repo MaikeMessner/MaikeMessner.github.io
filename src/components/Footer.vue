@@ -6,7 +6,7 @@
       >
         <div class="col-5 col-sm-2 p-2">
           <img
-            class="w-100"
+            class="w-75"
             :src="leaves.src"
             :alt="leaves.alt"
           />
