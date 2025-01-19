@@ -11,7 +11,7 @@
             :alt="leaves.alt"
           />
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-4">
           <span class="fw-regular footertext">{{
             $t("header:usageNote")
           }}</span>
