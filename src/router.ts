@@ -1,6 +1,6 @@
 import {
   createRouter,
-  createWebHistory,
+  createWebHashHistory,
   isNavigationFailure,
 } from "vue-router";
 import { hasLoadedNamespace, loadNamespaces } from "i18next";
@@ -8,7 +8,7 @@ import { routes } from "./routes";
 import { titleInfo } from "./state/title";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 router.beforeEach(async (to) => {
