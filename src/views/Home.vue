@@ -1,0 +1,152 @@
+<template>
+  <!-- Masonry -->
+  <div class="container-fluid containerpadding">
+    <div
+      ref="masonry"
+      v-masonry="{
+        percentPosition: true,
+        itemSelector: '.masonryItem',
+        horizontalOrder: false,
+      }"
+      class="row justify-content-between"
+    >
+      <template
+        v-for="item in masonryEntries"
+        :key="item.uuid"
+      >
+        <div
+          v-show="!masonryFilter || item.tags.includes(masonryFilter)"
+          class="col-sm-6 col-lg-4 mb-4"
+          :class="{
+            masonryItem: !masonryFilter || item.tags.includes(masonryFilter),
+          }"
+        >
+          <RouterLink
+            v-if="item.linkTarget"
+            :to="item.linkTarget"
+            class="w-100"
+          >
+            <img
+              class="w-100"
+              :src="item.img"
+              :alt="item.imgAlt"
+            />
+          </RouterLink>
+
+          <img
+            v-else
+            class="w-100"
+            :src="item.img"
+            :alt="item.imgAlt"
+          />
+        </div>
+      </template>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+  import { watch } from "vue";
+
+  const getImageUrl = (image: string): string =>
+    new URL(`../assets/img/${image}`, import.meta.url).href;
+
+  export default {
+    data() {
+      return {
+        masonryFilter: undefined as string | undefined,
+        masonryEntries: [
+          {
+            uuid: "b1f674e4-743d-4a07-8768-44f0dc696148",
+            img: getImageUrl("wellig-dellig-mockup.jpg"),
+            imgAlt: "Wellig-dellig",
+            linkTarget: { name: "welligdellig" },
+            tags: ["booksComics"],
+          },
+          {
+            uuid: "3907fa6b-4ea4-4108-af6f-0c330f0d155c",
+            img: getImageUrl("Linokalender.JPG"),
+            imgAlt: "Lino",
+            linkTarget: { name: "linokalender" },
+            tags: ["illustration"],
+          },
+          {
+            uuid: "30ff5b86-89f7-45c7-9b41-2c6ff7dc6261",
+            img: getImageUrl("Wildwuchs.JPG"),
+            imgAlt: "Wildwuchs",
+            linkTarget: { name: "wildwuchs" },
+            tags: ["motion"],
+          },
+          {
+            uuid: "1965d346-b666-44c1-98f8-e99c34ae89ff",
+            img: getImageUrl("Wimmelbild01-farbe.png"),
+            imgAlt: "Wimmelbild",
+            linkTarget: { name: "wimmelbild" },
+            tags: ["illustration"],
+          },
+          {
+            uuid: "103a6af7-eff4-4aee-88cb-4b7955226a7d",
+            img: getImageUrl("Hexe-glaze.jpg"),
+            imgAlt: "Hexe",
+            linkTarget: undefined,
+            tags: ["illustration"],
+          },
+          {
+            uuid: "103a6af7-eff4-4aee-88cb-4b7955226a7d",
+            img: getImageUrl("Riso-glaze.jpg"),
+            imgAlt: "Riso",
+            linkTarget: undefined,
+            tags: ["illustration"],
+          },
+          {
+            uuid: "a11fa9ab-c7a5-4a9b-8339-a77f6f917109",
+            img: getImageUrl("Waschtag-glaze.jpg"),
+            imgAlt: "Waschtag",
+            linkTarget: undefined,
+            tags: ["illustration"],
+          },
+          {
+            uuid: "1ab33658-e4a1-472a-b1bf-9e58fcc2d997",
+            img: getImageUrl("Kraehe-glaze.jpg"),
+            imgAlt: "Kraehe",
+            linkTarget: undefined,
+            tags: ["illustration"],
+          },
+          {
+            uuid: "f199519e-bd31-4a86-9e24-c529be4f4649",
+            img: getImageUrl("Help.png"),
+            imgAlt: "Help",
+            linkTarget: undefined,
+            tags: ["booksComics", "illustration"],
+          },
+          {
+            uuid: "0396d3dd-7190-4a7d-aae9-7373da883dc6",
+            img: getImageUrl("skull.gif"),
+            imgAlt: "skull",
+            linkTarget: undefined,
+            tags: ["motion"],
+          },
+          {
+            uuid: "283389dc-af66-4b72-9e5a-869a30be59ab",
+            img: getImageUrl("Bett-glaze.jpg"),
+            imgAlt: "Bett",
+            linkTarget: undefined,
+            tags: ["illustration"],
+          },
+        ],
+      };
+    },
+
+    created() {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      this.masonryFilter = (this.$route.params.filter as string) || undefined;
+
+      watch(
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access
+        () => this.$route.params.filter,
+
+        (filter) => (this.masonryFilter = (filter as string) || undefined),
+      );
+    },
+  };
+</script>

@@ -1,0 +1,6 @@
+name: "Build on push"
+on: [push, pull_request]
+jobs:
+  build:
+    uses: ./.github/workflows/build.yaml
+    secrets: inherit

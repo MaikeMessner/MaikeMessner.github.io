@@ -1,0 +1,82 @@
+@media (max-width: 576px) {
+  .containerpadding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .containerpadding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .containerpadding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .containerpadding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .containerpadding {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .containerpadding {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    font-size: 0.9375rem;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  height: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.slider-focus:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.coloured-slider {
+  --divider-color: rgba(96, 96, 96, 1);
+  --default-handle-color: rgba(255, 255, 255, 1);
+}
+
+.stickytext {
+  position: sticky;
+  top: 2rem;
+}
+
+.carouseltransition {
+  transition: none;
+}

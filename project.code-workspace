@@ -1,0 +1,35 @@
+{
+  "folders": [
+    {
+      "path": ".",
+    },
+  ],
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "Vue.volar"
+    ]
+  },
+  "settings": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always",
+      "source.fixAll.ts": "always"
+    },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.tabSize": 2,
+    "editor.wordWrap": "wordWrapColumn" ,
+    "eslint.debug": true,
+    "eslint.runtime": "node",
+    "eslint.useFlatConfig": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.options": {},
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" }
+  }
+}
