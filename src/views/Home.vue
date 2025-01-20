@@ -26,17 +26,19 @@
             :to="item.linkTarget"
             class="w-100"
           >
-            <img
+            <LoadingPlaceholderImg
               class="w-100"
               :src="item.img"
+              :loading-src="item.loadingImg ?? ''"
               :alt="item.imgAlt"
             />
           </RouterLink>
 
-          <img
+          <LoadingPlaceholderImg
             v-else
             class="w-100"
             :src="item.img"
+            :loading-src="item.loadingImg ?? ''"
             :alt="item.imgAlt"
           />
         </div>
@@ -47,11 +49,17 @@
 
 <script lang="ts">
   import { watch } from "vue";
+  import LoadingPlaceholderImg from "../components/LoadingPlaceholderImg.vue";
 
   const getImageUrl = (image: string): string =>
     new URL(`../assets/img/${image}`, import.meta.url).href;
 
   export default {
+    components: {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      LoadingPlaceholderImg,
+    },
+
     data() {
       return {
         masonryFilter: undefined as string | undefined,
