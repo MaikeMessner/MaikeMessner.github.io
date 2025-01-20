@@ -67,6 +67,7 @@
           {
             uuid: "b1f674e4-743d-4a07-8768-44f0dc696148",
             img: getImageUrl("wellig-dellig-mockup.jpg"),
+            loadingImg: undefined,
             imgAlt: "Wellig-dellig",
             linkTarget: { name: "welligdellig" },
             tags: ["booksComics"],
@@ -74,6 +75,7 @@
           {
             uuid: "3907fa6b-4ea4-4108-af6f-0c330f0d155c",
             img: getImageUrl("Linokalender.JPG"),
+            loadingImg: undefined,
             imgAlt: "Lino",
             linkTarget: { name: "linokalender" },
             tags: ["illustration"],
@@ -81,6 +83,7 @@
           {
             uuid: "30ff5b86-89f7-45c7-9b41-2c6ff7dc6261",
             img: getImageUrl("Wildwuchs.JPG"),
+            loadingImg: undefined,
             imgAlt: "Wildwuchs",
             linkTarget: { name: "wildwuchs" },
             tags: ["motion"],
@@ -88,6 +91,7 @@
           {
             uuid: "1965d346-b666-44c1-98f8-e99c34ae89ff",
             img: getImageUrl("Wimmelbild01-farbe.png"),
+            loadingImg: undefined,
             imgAlt: "Wimmelbild",
             linkTarget: { name: "wimmelbild" },
             tags: ["illustration"],
@@ -95,6 +99,7 @@
           {
             uuid: "103a6af7-eff4-4aee-88cb-4b7955226a7d",
             img: getImageUrl("Hexe-glaze.jpg"),
+            loadingImg: undefined,
             imgAlt: "Hexe",
             linkTarget: undefined,
             tags: ["illustration"],
@@ -102,6 +107,7 @@
           {
             uuid: "103a6af7-eff4-4aee-88cb-4b7955226a7d",
             img: getImageUrl("Riso-glaze.jpg"),
+            loadingImg: undefined,
             imgAlt: "Riso",
             linkTarget: undefined,
             tags: ["illustration"],
@@ -109,6 +115,7 @@
           {
             uuid: "a11fa9ab-c7a5-4a9b-8339-a77f6f917109",
             img: getImageUrl("Waschtag-glaze.jpg"),
+            loadingImg: undefined,
             imgAlt: "Waschtag",
             linkTarget: undefined,
             tags: ["illustration"],
@@ -116,6 +123,7 @@
           {
             uuid: "1ab33658-e4a1-472a-b1bf-9e58fcc2d997",
             img: getImageUrl("Kraehe-glaze.jpg"),
+            loadingImg: undefined,
             imgAlt: "Kraehe",
             linkTarget: undefined,
             tags: ["illustration"],
@@ -123,6 +131,7 @@
           {
             uuid: "f199519e-bd31-4a86-9e24-c529be4f4649",
             img: getImageUrl("Help.png"),
+            loadingImg: undefined,
             imgAlt: "Help",
             linkTarget: undefined,
             tags: ["booksComics", "illustration"],
@@ -130,6 +139,7 @@
           {
             uuid: "0396d3dd-7190-4a7d-aae9-7373da883dc6",
             img: getImageUrl("skull.gif"),
+            loadingImg: undefined,
             imgAlt: "skull",
             linkTarget: undefined,
             tags: ["motion"],
@@ -137,6 +147,7 @@
           {
             uuid: "283389dc-af66-4b72-9e5a-869a30be59ab",
             img: getImageUrl("Bett-glaze.jpg"),
+            loadingImg: undefined,
             imgAlt: "Bett",
             linkTarget: undefined,
             tags: ["illustration"],
