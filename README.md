@@ -1,5 +1,12 @@
-# Vue 3 + TypeScript + Vite
+# MaikeMessner.de
+Dies ist der Code der Website https://maikemessner.de (https://maikemessner.github.io).
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Lizenz
+Die Verwendung des Codes, der Assets oder anderer Teile dieses Projekts und dieser Software ohne schriftliche Genehmigung der Projekteignerin (Maike Meßner) ist strikt untersagt. Besonders die Verwendung von Graphiken, Bildern, Illustrationen und Mediendateien zur Darstellung auf anderen Medien und Website, sowie die Verwendung für das Training oder die Anwendung von KI ist nicht gestattet.
+Die Rechte einiger Assets können bei dritten Parteien liegen und properietären Lizenzen unterliegen.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+# License
+The use of the code, assets or other parts of this project and this software without the written permission of the project owner (Maike Meßner) is strictly prohibited. In particular, the use of graphics, images, illustrations and media files for display on other media and websites, as well as the use for training or the application of AI is not permitted.
+The rights to some assets may be held by third parties and may be subject to proprietary licenses.
+
+Translated with DeepL.com (free version)
