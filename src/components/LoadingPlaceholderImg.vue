@@ -1,13 +1,18 @@
 <script lang="ts">
   import { useImage } from "@vueuse/core";
+  import { watch } from "vue";
 
   export default {
-    name: "LoadingPlaceholderImg",
-    inheritAttrs: false,
-
     props: {
-      src: String(""),
-      loadingSrc: String(""),
+      src: {
+        type: String,
+        required: true,
+      },
+      loadingSrc: {
+        type: String,
+        required: false,
+        default: "",
+      },
     },
 
     data() {
@@ -16,10 +21,13 @@
       };
     },
 
-    mounted() {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      const { isLoading } = useImage({ src: this.isLoading });
-      this.isLoading = isLoading;
+    created() {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+      const { isLoading } = useImage({ src: this.$props.src });
+      watch(
+        () => isLoading.value,
+        (value) => (this.isLoading = value),
+      );
     },
   };
 </script>
