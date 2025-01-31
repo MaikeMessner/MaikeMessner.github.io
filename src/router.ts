@@ -10,10 +10,13 @@ import { titleInfo } from "./state/title";
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
-    const pos = savedPosition ?? { top: 0, behavior: "smooth" };
-    console.log(pos);
-    return pos;
+  scrollBehavior(_to, _from, savedPosition) {
+    return new Promise((resolve) => {
+      setTimeout(
+        () => resolve(savedPosition ?? { top: 0, behavior: "smooth" }),
+        50,
+      );
+    });
   },
 });
 
