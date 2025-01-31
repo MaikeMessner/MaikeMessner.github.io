@@ -10,7 +10,13 @@ import { titleInfo } from "./state/title";
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    const pos = savedPosition ?? { top: 0, behavior: "smooth" };
+    console.log(pos);
+    return pos;
+  },
 });
+
 router.beforeEach(async (to) => {
   await Promise.all(
     ((to.meta.i18nextNs as string[]) || []).map(async (ns) => {
