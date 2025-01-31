@@ -14,10 +14,10 @@ export default [
   eslintPluginImport.flatConfigs.recommended,
   eslintPluginImport.flatConfigs.typescript,
   {
-    "settings": {
+    settings: {
       "import/resolver": {
-        "typescript": true,
-        "node": true,
+        typescript: true,
+        node: true,
       },
     },
   },
@@ -25,7 +25,7 @@ export default [
     ignores: ["dist"],
   },
   {
-    files: ["*.js", "**/*.json"],
+    files: ["*.js", "**/*.json", "*.code-workspace"],
     ...tseslint.configs.disableTypeChecked,
   },
   {
@@ -37,8 +37,13 @@ export default [
     },
   },
   {
-    files: ["*.json", "**/*.json"],
+    files: ["*.json", "**/*.json", "**/*.code-workspace"],
     ...jsonPlugin.configs.recommended,
+    languageOptions: {
+      parserOptions: {
+        extraFileExtensions: [".code-workspace"],
+      },
+    },
   },
   {
     rules: {

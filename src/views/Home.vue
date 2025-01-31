@@ -164,7 +164,7 @@
         // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access
         () => this.$route.params.filter,
 
-        (filter) => (this.masonryFilter = (filter as string) || undefined),
+        filter => (this.masonryFilter = (filter as string) || undefined),
       );
     },
   };

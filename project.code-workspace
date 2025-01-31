@@ -11,17 +11,17 @@
       "github.vscode-github-actions",
       "firefox-devtools.vscode-firefox-debug",
       "ms-vscode-remote.remote-containers",
-      "Vue.volar"
-    ]
+      "Vue.volar",
+    ],
   },
   "settings": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "always",
-      "source.fixAll.ts": "always"
+      "source.fixAll.ts": "always",
     },
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.tabSize": 2,
-    "editor.wordWrap": "wordWrapColumn" ,
+    "editor.wordWrap": "wordWrapColumn",
     "eslint.debug": true,
     "eslint.runtime": "node",
     "eslint.useFlatConfig": true,
@@ -31,8 +31,8 @@
     "files.autoSave": "onFocusChange",
     "files.insertFinalNewline": true,
     "[javascript]": {
-      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     },
-    "[typescript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" }
-  }
+    "[typescript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
+  },
 }

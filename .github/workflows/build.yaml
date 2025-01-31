@@ -12,20 +12,20 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repository
-      uses: actions/checkout@v4
+      - name: checkout repository
+        uses: actions/checkout@v4
 
-    - name: setup node
-      uses: actions/setup-node@v4
+      - name: setup node
+        uses: actions/setup-node@v4
 
-    - name: install dependencies
-      run: yarn install --frozen-lockfile
+      - name: install dependencies
+        run: yarn install --frozen-lockfile
 
-    - name: build project
-      run: yarn build
+      - name: build project
+        run: yarn build
 
-    - name: upload github pages artifact
-      uses: actions/upload-pages-artifact@v3
-      if: ${{ inputs.uploadArtifacts }}
-      with:
-        path: ./dist
+      - name: upload github pages artifact
+        uses: actions/upload-pages-artifact@v3
+        if: ${{ inputs.uploadArtifacts }}
+        with:
+          path: ./dist

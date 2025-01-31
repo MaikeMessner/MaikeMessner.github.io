@@ -18,5 +18,13 @@
 
     "allowJs": true
   },
-  "include": ["vite.config.ts", "src/**/*.d.ts", "**/*.json", "*.json", "./.**/*.json", "./*.js", "./.*.js"]
+  "include": [
+    "vite.config.ts",
+    "src/**/*.d.ts",
+    "**/*.json",
+    "*.json",
+    "./.**/*.json",
+    "./*.js",
+    "./.*.js"
+  ]
 }

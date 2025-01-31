@@ -57,4 +57,4 @@ i18NextInitialized
       .directive("html-slot", vHtmlSlot)
       .mount("#app");
   })
-  .catch((err) => console.error(err));
+  .catch(err => console.error(err));

@@ -26,7 +26,7 @@
       const { isLoading } = useImage({ src: this.$props.src });
       watch(
         () => isLoading.value,
-        (value) => (this.isLoading = value),
+        value => (this.isLoading = value),
       );
     },
   };

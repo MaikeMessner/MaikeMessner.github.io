@@ -11,7 +11,7 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes,
   scrollBehavior(_to, _from, savedPosition) {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       setTimeout(
         () => resolve(savedPosition ?? { top: 0, behavior: "smooth" }),
         50,
@@ -20,9 +20,9 @@ const router = createRouter({
   },
 });
 
-router.beforeEach(async (to) => {
+router.beforeEach(async to => {
   await Promise.all(
-    ((to.meta.i18nextNs as string[]) || []).map(async (ns) => {
+    ((to.meta.i18nextNs as string[]) || []).map(async ns => {
       if (!hasLoadedNamespace(ns)) {
         await loadNamespaces(ns);
       }

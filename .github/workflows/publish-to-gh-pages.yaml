@@ -2,11 +2,11 @@ name: Publish to GitHub Pages
 on:
   release:
     types:
-    - published
+      - published
   workflow_dispatch:
 
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 permissions:
@@ -31,6 +31,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-    - name: deploy to github pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+      - name: deploy to github pages
+        id: deployment
+        uses: actions/deploy-pages@v4

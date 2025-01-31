@@ -1,5 +1,5 @@
 const config = {
-  arrowParents: "avoid",
+  arrowParens: "avoid",
   singleAttributePerLine: true,
   vueIndentScriptAndStyle: true,
 };
