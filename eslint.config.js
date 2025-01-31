@@ -1,13 +1,17 @@
 import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import jsonPlugin from "eslint-plugin-json";
 import eslintPluginImport from "eslint-plugin-import";
+import {
+  configs as tsPluginConfigs,
+  plugin as tsPluginPlugin,
+  parser as tsPluginParser,
+} from "typescript-eslint";
 
 export default [
-  ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
+  ...tsPluginConfigs.recommendedTypeChecked,
+  ...tsPluginConfigs.stylisticTypeChecked,
   ...pluginVue.configs["flat/recommended"],
   pluginJs.configs.recommended,
   eslintPluginPrettierRecommended,
@@ -26,7 +30,7 @@ export default [
   },
   {
     files: ["*.js", "**/*.json", "*.code-workspace"],
-    ...tseslint.configs.disableTypeChecked,
+    ...tsPluginConfigs.disableTypeChecked,
   },
   {
     languageOptions: {
@@ -76,11 +80,11 @@ export default [
   },
   {
     plugins: {
-      "typescript-eslint": tseslint.plugin,
+      "typescript-eslint": tsPluginPlugin,
     },
     languageOptions: {
       parserOptions: {
-        parser: tseslint.parser,
+        parser: tsPluginParser,
         projectService: true,
         extraFileExtensions: [".vue"],
         allowDefaultProject: ["*.js"],
