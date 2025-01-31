@@ -10,7 +10,6 @@
       "esbenp.prettier-vscode",
       "github.vscode-github-actions",
       "firefox-devtools.vscode-firefox-debug",
-      "ms-vscode-remote.remote-containers",
       "Vue.volar",
     ],
   },
