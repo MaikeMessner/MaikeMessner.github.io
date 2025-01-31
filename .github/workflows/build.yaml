@@ -1,5 +1,11 @@
 on:
   workflow_call:
+    inputs:
+      uploadArtifacts:
+        description: "Enables uploading github pages artifacts after building"
+        type: boolean
+        required: false
+        default: true
 
 jobs:
   build:
@@ -20,5 +26,6 @@ jobs:
 
     - name: upload github pages artifact
       uses: actions/upload-pages-artifact@v3
+      if: ${{ inputs.uploadArtifacts }}
       with:
         path: ./dist
