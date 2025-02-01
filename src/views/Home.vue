@@ -7,6 +7,7 @@
         percentPosition: true,
         itemSelector: '.masonryItem',
         horizontalOrder: false,
+        imagesLoadedMode: 'onProgress',
       }"
       class="row justify-content-between"
     >
