@@ -13,7 +13,7 @@
     <template #left>
       <img
         class="w-100"
-        src="../assets/img/Linokalender.JPG"
+        src="../assets/img/Linokalender.jpg"
       />
       <img
         class="w-100"
