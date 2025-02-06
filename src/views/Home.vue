@@ -66,6 +66,14 @@
         masonryFilter: undefined as string | undefined,
         masonryEntries: [
           {
+            uuid: "6aed85fa-43bd-4133-ac47-fbe08a5c9fb5",
+            img: getImageUrl("Fusselbrie-Masonry.jpg"),
+            loadingImg: undefined,
+            imgAlt: "Fusselbrie & Kabelsalat",
+            linkTarget: { name: "fusselbriekabelsalat" },
+            tags: ["booksComics", "illustration"],
+          },
+          {
             uuid: "b1f674e4-743d-4a07-8768-44f0dc696148",
             img: getImageUrl("wellig-dellig-mockup.jpg"),
             loadingImg: getImageUrl("wellig-dellig-mockup-sm.jpg"),

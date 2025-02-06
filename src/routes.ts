@@ -12,6 +12,15 @@ export const routes = [
     meta: { titleKey: "header:about", i18nextNs: ["about"] },
   },
   {
+    path: "/fusselbrie-kabelsalat",
+    component: () => import("./views/FusselbrieKabelsalat.vue"),
+    name: "fusselbriekabelsalat",
+    meta: {
+      titleKey: "fusselbrie-kabelsalat:title",
+      i18nextNs: ["fusselbrie-kabelsalat"],
+    },
+  },
+  {
     path: "/linokalender",
     component: () => import("./views/Linokalender.vue"),
     name: "linokalender",
