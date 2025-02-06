@@ -8,7 +8,7 @@
         <slot name="left"></slot>
       </div>
 
-      <div :class="rightContainerClass">
+      <div :class="rightContainerClass + ' ' + additionalRightContainerClass">
         <div
           v-if="headlineKey || textKey || $slots.stickyRight"
           class="stickytext"
@@ -32,13 +32,13 @@
               {{ item }}
             </p>
           </template>
+          <slot name="stickyRight"></slot>
         </div>
-        <slot name="stickyRight"></slot>
+        <slot
+          v-if="$slots.right"
+          name="right"
+        ></slot>
       </div>
-      <slot
-        v-if="$slots.right"
-        name="right"
-      ></slot>
     </div>
   </div>
 </template>
@@ -65,6 +65,11 @@
         type: String,
         optional: true,
         default: "col-sm-6 col-lg-4 mb-4",
+      },
+      additionalRightContainerClass: {
+        type: String,
+        optional: true,
+        default: "",
       },
       additionalRowClass: {
         type: String,
