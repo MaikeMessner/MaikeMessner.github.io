@@ -142,7 +142,7 @@
             img: getImageUrl("Help.png"),
             loadingImg: getImageUrl("Help-sm.png"),
             imgAlt: "Help",
-            linkTarget: undefined,
+            linkTarget: { name: "fusselbriekabelsalat" },
             tags: ["booksComics", "illustration"],
           },
           {
