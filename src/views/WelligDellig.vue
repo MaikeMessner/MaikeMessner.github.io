@@ -70,5 +70,11 @@
         </button>
       </div>
     </template>
+    <template #stickyRight>
+      <p class="fw-bold mt-5">
+        {{ $t("wellig-dellig:bachelorTitle") }}
+      </p>
+      <p>{{ $t("wellig-dellig:bachelorText") }}</p>
+    </template>
   </DefaultPage>
 </template>
