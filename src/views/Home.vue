@@ -50,7 +50,6 @@
 </template>
 
 <script lang="ts">
-  import { getAsset } from "node:sea";
   import { watch } from "vue";
   import LoadingPlaceholderImg from "../components/LoadingPlaceholderImg.vue";
 
