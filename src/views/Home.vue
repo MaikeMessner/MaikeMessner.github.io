@@ -32,6 +32,7 @@
               :src="item.img"
               :loading-src="item.loadingImg ?? ''"
               :alt="item.imgAlt"
+              :zoom-on-hover="true"
             />
           </RouterLink>
 
@@ -49,6 +50,7 @@
 </template>
 
 <script lang="ts">
+  import { getAsset } from "node:sea";
   import { watch } from "vue";
   import LoadingPlaceholderImg from "../components/LoadingPlaceholderImg.vue";
 
@@ -142,8 +144,8 @@
             img: getImageUrl("Help.png"),
             loadingImg: getImageUrl("Help-sm.png"),
             imgAlt: "Help",
-            linkTarget: { name: "fusselbriekabelsalat" },
-            tags: ["booksComics", "illustration"],
+            linkTarget: undefined,
+            tags: ["illustration"],
           },
           {
             uuid: "0396d3dd-7190-4a7d-aae9-7373da883dc6",
@@ -160,6 +162,30 @@
             imgAlt: "Bett",
             linkTarget: undefined,
             tags: ["illustration"],
+          },
+          {
+            uuid: "908ad917-1015-4464-81ce-7b112f0fa3a9",
+            img: getImageUrl("Factence-Diagramme.gif"),
+            loadingImg: getImageUrl("Factence-Diagramme.gif"),
+            imgAlt: "Factence",
+            linkTarget: { name: "lotties" },
+            tags: ["motion"],
+          },
+          {
+            uuid: "a7a16def-fdef-4a98-84e9-6f0e4c7981b1",
+            img: getImageUrl("Willkommenskarte_WebCom.jpg"),
+            loadingImg: getImageUrl("Willkommenskarte_WebCom_sm.jpg"),
+            imgAlt: "Postkarten",
+            linkTarget: { name: "postkarten" },
+            tags: ["graphicdesign-ux"],
+          },
+          {
+            uuid: "417a64b8-8a38-4c41-9b41-4c6b18d1d451",
+            img: getImageUrl("smiley.gif"),
+            loadingImg: getImageUrl("smiley.gif"),
+            imgAlt: "Smiley",
+            linkTarget: undefined,
+            tags: ["motion"],
           },
         ],
       };

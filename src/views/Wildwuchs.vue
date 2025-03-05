@@ -3,8 +3,10 @@
 </script>
 
 <template>
-  <DefaultPage>
-    <template #left
+  <DefaultPage
+    headline-key="wildwuchs:headline"
+    text-key="wildwuchs:text"
+    ><template #left
       ><div class="tutorial container text-center ratio ratio-16x9">
         <iframe
           src="https://www.youtube.com/embed/JN18APYFetM?si=3xc4XVdDLCkJDhGy"

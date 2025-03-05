@@ -18,8 +18,15 @@
         <div>
           <h1>{{ $t("header:about") }}</h1>
           <p class="aboutfont">
-            {{ $t("about:mainText") }}<br />
-            <br />
+            
+            <p
+              v-for="(item, index) in $t('about:mainText', {
+                returnObjects: true,
+              })"
+              :key="index"
+            >
+              {{ item }}
+            </p>
             <a
               :href="'mailto:' + $t('about:mail')"
               class="link-primary link-underline-opacity-0 semibold"
@@ -34,7 +41,7 @@
           <i18next :translation="$t('about:bscParcours')">
             <template #bscParcoursLink>
               <a
-                href="https://sose23.parcours-muenster.de/absolventen/?fbclid=PAAaZ3YP0ZCdfov8K7RqiNSpPvyBotR1GWgB48i-LnySq0h3dkWqjN1IICXKg"
+                href="https://wise24.parcours-muenster.de/katalog/"
                 class="link-primary link-underline-opacity-0 semibold"
                 target="_blank"
                 >{{ $t("about:linkTitle") }}</a

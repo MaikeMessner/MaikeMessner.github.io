@@ -124,10 +124,10 @@
           //   translationKey: "header:design",
           //   tag: "design",
           // },
-          // {
-          //   translationKey: "header:graphicUx",
-          //   tag: "graphicUx",
-          // },
+          {
+            translationKey: "header:graphicdesign-ux",
+            tag: "graphicdesign-ux",
+          },
         ],
         languages: {
           de: "DE",

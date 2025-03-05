@@ -31,7 +31,7 @@ const i18NextInitialized = i18next
     },
     load: "languageOnly",
     backend: {
-      backends: [I18NextLocalStorageBackend, I18NextHttpBackend],
+      backends: [I18NextHttpBackend],
       backendOptions: [
         {
           projectId: "maikesWebsite",

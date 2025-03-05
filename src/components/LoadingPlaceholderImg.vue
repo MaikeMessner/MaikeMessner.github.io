@@ -13,6 +13,11 @@
         required: false,
         default: "",
       },
+      zoomOnHover: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
     },
 
     data() {
@@ -33,8 +38,27 @@
 </script>
 
 <template>
-  <img
-    :src="isLoading ? loadingSrc || src : src"
-    v-bind="$attrs"
-  />
+  <div class="imgBox">
+    <img
+      :src="isLoading ? loadingSrc || src : src"
+      v-bind="$attrs"
+      :class="{ zoom: zoomOnHover }"
+    />
+  </div>
 </template>
+
+<style>
+  .imgBox {
+    /* now a container for the image */
+    display: inline-block; /* shrink wrap to image */
+    overflow: hidden; /* hide the excess */
+  }
+  .imgBox .zoom {
+    display: block; /* no whitespace */
+    transition: 0.3s ease-in-out;
+  }
+  .imgBox:hover .zoom {
+    transform: scale(1.025);
+    filter: brightness(85%);
+  }
+</style>

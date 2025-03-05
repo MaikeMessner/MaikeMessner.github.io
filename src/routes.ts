@@ -45,6 +45,18 @@ export const routes = [
     meta: { titleKey: "wimmelbild:title", i18nextNs: ["wimmelbild"] },
   },
   {
+    path: "/postkarten",
+    component: () => import("./views/Postkarten.vue"),
+    name: "postkarten",
+    meta: { titleKey: "postkarten:title", i18nextNs: ["postkarten"] },
+  },
+  {
+    path: "/lotties",
+    component: () => import("./views/Lotties.vue"),
+    name: "lotties",
+    meta: { titleKey: "lotties:title", i18nextNs: ["lotties"] },
+  },
+  {
     name: "imprint",
     path: "/impressum",
     alias: "/imprint",
