@@ -17,8 +17,7 @@
       <div class="justify-content-between d-flex flex-column h-100">
         <div>
           <h1>{{ $t("header:about") }}</h1>
-          <p class="aboutfont">
-            
+          <div class="aboutfont">
             <p
               v-for="(item, index) in $t('about:mainText', {
                 returnObjects: true,
@@ -34,7 +33,7 @@
             >
               {{ $t("about:mail") }}
             </a>
-          </p>
+          </div>
         </div>
         <p class="aboutfont text-end">
           {{ $t("about:look") }}<br />
