@@ -84,7 +84,7 @@
             loadingImg: getImageUrl("wellig-dellig-mockup-sm4.jpg"),
             imgAlt: "Wellig-dellig",
             linkTarget: { name: "welligdellig" },
-            tags: ["booksComics"],
+            tags: ["booksComics", "graphicdesign-ux"],
             height: undefined,
             width: undefined,
           },
