@@ -8,6 +8,7 @@ import {
   plugin as tsPluginPlugin,
   parser as tsPluginParser,
 } from "typescript-eslint";
+import globals from "globals";
 
 export default [
   ...tsPluginConfigs.recommendedTypeChecked,
@@ -83,6 +84,9 @@ export default [
       "typescript-eslint": tsPluginPlugin,
     },
     languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
       parserOptions: {
         parser: tsPluginParser,
         projectService: true,

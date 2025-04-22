@@ -33,6 +33,8 @@
               :loading-src="''"
               :alt="item.imgAlt"
               :zoom-on-hover="true"
+              :height="item.height"
+              :width="item.width"
             />
           </RouterLink>
 
@@ -73,6 +75,8 @@
             imgAlt: "Fusselbrie & Kabelsalat",
             linkTarget: { name: "fusselbriekabelsalat" },
             tags: ["booksComics", "illustration"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "b1f674e4-743d-4a07-8768-44f0dc696148",
@@ -81,6 +85,8 @@
             imgAlt: "Wellig-dellig",
             linkTarget: { name: "welligdellig" },
             tags: ["booksComics"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "3907fa6b-4ea4-4108-af6f-0c330f0d155c",
@@ -89,6 +95,8 @@
             imgAlt: "Lino",
             linkTarget: { name: "linokalender" },
             tags: ["illustration"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "30ff5b86-89f7-45c7-9b41-2c6ff7dc6261",
@@ -97,6 +105,8 @@
             imgAlt: "Wildwuchs",
             linkTarget: { name: "wildwuchs" },
             tags: ["motion"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "1965d346-b666-44c1-98f8-e99c34ae89ff",
@@ -105,6 +115,8 @@
             imgAlt: "Wimmelbild",
             linkTarget: { name: "wimmelbild" },
             tags: ["illustration"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "103a6af7-eff4-4aee-88cb-4b7955226a7d",
@@ -113,6 +125,8 @@
             imgAlt: "Hexe",
             linkTarget: undefined,
             tags: ["illustration"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "103a6af7-eff4-4aee-88cb-4b7955226a7d",
@@ -121,6 +135,8 @@
             imgAlt: "Riso",
             linkTarget: undefined,
             tags: ["illustration"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "a11fa9ab-c7a5-4a9b-8339-a77f6f917109",
@@ -129,6 +145,8 @@
             imgAlt: "Waschtag",
             linkTarget: undefined,
             tags: ["illustration"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "1ab33658-e4a1-472a-b1bf-9e58fcc2d997",
@@ -137,6 +155,8 @@
             imgAlt: "Kraehe",
             linkTarget: undefined,
             tags: ["illustration"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "f199519e-bd31-4a86-9e24-c529be4f4649",
@@ -145,6 +165,8 @@
             imgAlt: "Help",
             linkTarget: undefined,
             tags: ["illustration"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "0396d3dd-7190-4a7d-aae9-7373da883dc6",
@@ -153,6 +175,8 @@
             imgAlt: "skull",
             linkTarget: undefined,
             tags: ["motion"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "283389dc-af66-4b72-9e5a-869a30be59ab",
@@ -161,6 +185,8 @@
             imgAlt: "Bett",
             linkTarget: undefined,
             tags: ["illustration"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "908ad917-1015-4464-81ce-7b112f0fa3a9",
@@ -169,6 +195,8 @@
             imgAlt: "Factence",
             linkTarget: { name: "lotties" },
             tags: ["motion"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "a7a16def-fdef-4a98-84e9-6f0e4c7981b1",
@@ -177,6 +205,8 @@
             imgAlt: "Postkarten",
             linkTarget: { name: "postkarten" },
             tags: ["graphicdesign-ux"],
+            height: undefined,
+            width: undefined,
           },
           {
             uuid: "417a64b8-8a38-4c41-9b41-4c6b18d1d451",
@@ -185,6 +215,8 @@
             imgAlt: "Smiley",
             linkTarget: undefined,
             tags: ["motion"],
+            height: undefined,
+            width: undefined,
           },
         ],
       };
