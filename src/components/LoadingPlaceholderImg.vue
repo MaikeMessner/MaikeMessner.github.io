@@ -18,6 +18,16 @@
         required: false,
         default: false,
       },
+      height: {
+        type: Number,
+        required: false,
+        default: undefined,
+      },
+      width: {
+        type: Number,
+        required: false,
+        default: undefined,
+      },
     },
 
     data() {
@@ -43,6 +53,8 @@
       :src="isLoading ? loadingSrc || src : src"
       v-bind="$attrs"
       :class="{ zoom: zoomOnHover }"
+      :height="height"
+      :width="width"
     />
   </div>
 </template>
