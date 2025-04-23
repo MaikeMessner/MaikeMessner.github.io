@@ -63,4 +63,10 @@ export const routes = [
     component: () => import("./views/Imprint.vue"),
     meta: { titleKey: "imprint:title", i18nextNs: ["imprint"] },
   },
+  {
+    path: "/kaffeeverpackung",
+    component: () => import("./views/Kaffeeverpackung.vue"),
+    name: "kaffeeverpackung",
+    meta: { titleKey: "kaffeeverpackung:title", i18nextNs: ["kaffeeverpackung"] },
+  },
 ];

@@ -129,6 +129,16 @@
             width: undefined,
           },
           {
+            uuid: "bfb3b0ba-1ccc-42a0-854b-4a235cc29114",
+            img: getImageUrl("Kaffee-Verpackung.jpg"),
+            loadingImg: getImageUrl("Kaffee-Verpackung-sm.jpg"),
+            imgAlt: "Kaffee",
+            linkTarget: { name: "kaffeeverpackung" },
+            tags: ["graphicdesign-ux"],
+            height: undefined,
+            width: undefined,
+          },
+          {
             uuid: "103a6af7-eff4-4aee-88cb-4b7955226a7d",
             img: getImageUrl("Riso-glaze1.jpg"),
             loadingImg: getImageUrl("Riso-glaze-sm1.jpg"),
