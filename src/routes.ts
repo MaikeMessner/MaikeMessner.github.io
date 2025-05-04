@@ -69,4 +69,10 @@ export const routes = [
     name: "kaffeeverpackung",
     meta: { titleKey: "kaffeeverpackung:title", i18nextNs: ["kaffeeverpackung"] },
   },
+  {
+    path: "/speisekarte",
+    component: () => import("./views/Speisekarte.vue"),
+    name: "speisekarte",
+    meta: { titleKey: "speisekarte:title", i18nextNs: ["speisekarte"] },
+  },
 ];

@@ -139,6 +139,16 @@
             width: undefined,
           },
           {
+            uuid: "78316dab-331f-4d70-8f63-fc27fbbedbf3",
+            img: getImageUrl("Hochzeitseinladung-Mockup-Home.jpg"),
+            loadingImg: getImageUrl("Hochzeitseinladung-Mockup-Home-sm.jpg"),
+            imgAlt: "Speisekarte",
+            linkTarget: { name: "speisekarte" },
+            tags: ["graphicdesign-ux"],
+            height: undefined,
+            width: undefined,
+          },
+          {
             uuid: "103a6af7-eff4-4aee-88cb-4b7955226a7d",
             img: getImageUrl("Riso-glaze1.jpg"),
             loadingImg: getImageUrl("Riso-glaze-sm1.jpg"),
