@@ -29,7 +29,15 @@
               })"
               :key="index"
             >
-              {{ item }}
+              <template v-if="Array.isArray(item)">
+                <template
+                  v-for="(subitem, subindex) in item"
+                  :key="subindex"
+                >
+                  <br v-if="subindex !== 0" />{{ subitem }}
+                </template>
+              </template>
+              <template v-else>{{ item }}</template>
             </p>
           </template>
           <slot name="stickyRight"></slot>
