@@ -13,32 +13,29 @@
           v-if="headlineKey || textKey || $slots.stickyRight"
           class="stickytext"
         >
-          <h1 v-if="headlineKey">
-            <span
-              v-for="(item, index) in $t(headlineKey, {
-                returnObjects: true,
-              })"
-              :key="index"
-              >{{ item }}<br
-            /></span>
-          </h1>
+          <template v-if="headlineKey">
+            <SingleOrMultilineText
+              :content="[
+                $t(headlineKey, {
+                  returnObjects: true,
+                }),
+              ]"
+              paragraph-component="h1"
+              subparagraph-component="span"
+              :include-linebreak="true"
+            ></SingleOrMultilineText>
+          </template>
           <template v-if="textKey">
-            <p
-              v-for="(item, index) in $t(textKey, {
-                returnObjects: true,
-              })"
-              :key="index"
-            >
-              <template v-if="Array.isArray(item)">
-                <template
-                  v-for="(subitem, subindex) in item"
-                  :key="subindex"
-                >
-                  <br v-if="subindex !== 0" />{{ subitem }}
-                </template>
-              </template>
-              <template v-else>{{ item }}</template>
-            </p>
+            <SingleOrMultilineText
+              :content="
+                $t(textKey, {
+                  returnObjects: true,
+                })
+              "
+              paragraph-component="p"
+              subparagraph-component="span"
+              :include-linebreak="true"
+            ></SingleOrMultilineText>
           </template>
           <slot name="stickyRight"></slot>
         </div>
@@ -52,7 +49,13 @@
 </template>
 
 <script lang="ts">
+  import SingleOrMultilineText from "./SingleOrMultilineText.vue";
+
   export default {
+    components: {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      SingleOrMultilineText,
+    },
     props: {
       headlineKey: {
         type: String,
