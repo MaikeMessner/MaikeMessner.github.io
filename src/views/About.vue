@@ -27,7 +27,7 @@
               {{ item }}
             </p>
             {{ $t("about:contact") }}
-            <br/>
+            <br />
             <a
               :href="'mailto:' + $t('about:mail')"
               class="link-primary link-underline-opacity-0 semibold"
@@ -37,7 +37,7 @@
             </a>
           </div>
         </div>
-        <br/>
+        <br />
         <p class="aboutfont text-end">
           {{ $t("about:look") }}<br />
           <i18next :translation="$t('about:bscParcours')">
