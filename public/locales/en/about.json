@@ -1,7 +1,5 @@
 {
   "mainText": [
-    "Hey and welcome!",
-    "",
     "I am Maike Meßner, illustrator, graphic designer and comic artist from Münster, Germany. I graduated from the University of Applied Sciences Münster in 2025 with a master's degree in design.",
     "",
     "I've always been the type to notice the strangest little details in everyday life. There are some great stories to be told about it! Preferably visual!",
@@ -12,5 +10,6 @@
   "look": "Look!",
   "linkTitle": "here",
   "bscParcours": "You can find me and my master thesis {bscParcoursLink}",
-  "mail": "hello@maikemessner.de"
+  "mail": "hello@maikemessner.de",
+  "contact": "Feel free to contact me:"
 }

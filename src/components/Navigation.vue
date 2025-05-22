@@ -55,7 +55,7 @@
                 :key="item.tag"
                 :to="{ name: 'home', params: { filter: item.tag } }"
                 class="nav-link navtext text-nowrap"
-                active-class="active"
+                active-class="selected"
                 data-bs-dismiss="offcanvas"
                 data-bs-target="#navbarSupportedContent"
               >
@@ -63,7 +63,7 @@
               </ButtonRouterLink>
               <ButtonRouterLink
                 class="nav-link navtext nav-item"
-                active-class="active"
+                active-class="selected"
                 :to="{ name: 'about' }"
                 data-bs-dismiss="offcanvas"
                 data-bs-target="#navbarSupportedContent"
@@ -139,6 +139,10 @@
 </script>
 
 <style lang="scss">
+  .selected {
+    font-weight:800 !important;
+  }
+
   .h-min-100 {
     min-height: 100%;
   }
@@ -156,7 +160,42 @@
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
+    display: inline-block;
+    position: relative;
+    box-sizing: content-box;
+}
+
+  .navtext:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    z-index: -1;
+    border-radius: 0.5em 0.2em;
+    box-sizing: content-box;
   }
+
+  .navtext::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 11px;
+  bottom: 9px;
+  left: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 0, 0.1),
+    rgb(253,255,0, 0.9) 4%,
+    rgba(255, 255, 0, 0.3)
+  );
+  transform-origin: top left;
+  transition: transform 0.35s ease-out;
+  z-index: -1;
+  border-radius: 0.5em 0.2em;
+  box-sizing: content-box;
+}
 
   .navbartoggler {
     background-color: none;

@@ -16,7 +16,7 @@
     <template #stickyRight>
       <div class="justify-content-between d-flex flex-column h-100">
         <div>
-          <h1>{{ $t("header:about") }}</h1>
+          <h1>{{ $t("about:headline") }}</h1>
           <div class="aboutfont">
             <p
               v-for="(item, index) in $t('about:mainText', {
@@ -26,6 +26,8 @@
             >
               {{ item }}
             </p>
+            {{ $t("about:contact") }}
+            <br/>
             <a
               :href="'mailto:' + $t('about:mail')"
               class="link-primary link-underline-opacity-0 semibold"
@@ -35,6 +37,7 @@
             </a>
           </div>
         </div>
+        <br/>
         <p class="aboutfont text-end">
           {{ $t("about:look") }}<br />
           <i18next :translation="$t('about:bscParcours')">
