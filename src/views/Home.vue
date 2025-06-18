@@ -237,6 +237,15 @@
             tags: ["motion"],
             height: undefined,
             width: undefined,
+          },          {
+            uuid: "09f02748-039a-4c8e-8567-87d39bcc42ff",
+            img: getImageUrl("Boardgame-Thumbnail.png"),
+            loadingImg: getImageUrl("Boardgame-Thumbnail.png"),
+            imgAlt: "Boardgame",
+            linkTarget: { name: "boardgame" },
+            tags: ["motion"],
+            height: undefined,
+            width: undefined,
           },
         ],
       };

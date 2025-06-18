@@ -78,4 +78,10 @@ export const routes = [
     name: "speisekarte",
     meta: { titleKey: "speisekarte:title", i18nextNs: ["speisekarte"] },
   },
+  {
+    path: "/boardgame",
+    component: () => import("./views/Boardgame.vue"),
+    name: "boardgame",
+    meta: { titleKey: "wildwuchs:title", i18nextNs: ["boardgame"] },
+  },
 ];
