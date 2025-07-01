@@ -86,7 +86,7 @@ export const routes = [
   },
   {
     path: "/dye",
-    component: () => import("./views/dye.vue"),
+    component: () => import("./views/Dye.vue"),
     name: "dye",
     meta: { titleKey: "dye:title", i18nextNs: ["dye"] },
   },
