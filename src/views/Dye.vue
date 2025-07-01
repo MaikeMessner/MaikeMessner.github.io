@@ -8,38 +8,36 @@
     text-key="dye:text"
   >
     <template #left>
-      <div
-        class="d-flex flex-wrap flex-md-row gap-2 align-items-center justify-content-around"
+      <video
+        autoplay
+        loop
+        muted
+        class="w-100 pb-1"
       >
+        <source src="../assets/img/Schwimmen.mp4" />
+      </video>
+      <video
+        autoplay
+        loop
+        muted
+        class="w-100 pb-1 pt-1"
+      >
+        <source src="../assets/img/Schlagen.mp4" />
+      </video>
+      <video
+        autoplay
+        loop
+        muted
+        class="w-100 pb-1 pt-1"
+      >
+        <source src="../assets/img/Switch-Bakterien.mp4" />
+      </video>
+      <div class="w-100 pb-1 pt-1 d-flex flex-wrap flex-column flex-md-row">
         <video
           autoplay
           loop
           muted
-          class="w-100 p-2"
-        >
-          <source src="../assets/img/Schwimmen.mp4" />
-        </video>
-        <video
-          autoplay
-          loop
-          muted
-          class="w-100 p-2"
-        >
-          <source src="../assets/img/Schlagen.mp4" />
-        </video>
-        <video
-          autoplay
-          loop
-          muted
-          class="w-100 p-2"
-        >
-          <source src="../assets/img/Switch-Bakterien.mp4" />
-        </video>
-        <video
-          autoplay
-          loop
-          muted
-          class="col-4 col-md-6"
+          class="col-12 col-md-6 pe-md-1 pb-1 pb-md-0"
         >
           <source src="../assets/img/Farbverlauf.mp4" />
         </video>
@@ -47,15 +45,15 @@
           autoplay
           loop
           muted
-          class="col-4 col-md-6"
+          class="col-12 col-md-6 ps-md-1 pt-1 pt-md-0"
         >
           <source src="../assets/img/Gegner.mp4" />
         </video>
-        <img
-          class="w-100 p-2"
-          src="../assets/img/Gegner.jpg"
-        />
       </div>
+      <img
+        class="w-100 pb-1 pt-1"
+        src="../assets/img/Gegner.jpg"
+      />
     </template>
     <template #stickyRight> </template>
   </DefaultPage>
