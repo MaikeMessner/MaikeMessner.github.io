@@ -82,6 +82,12 @@ export const routes = [
     path: "/boardgame",
     component: () => import("./views/Boardgame.vue"),
     name: "boardgame",
-    meta: { titleKey: "wildwuchs:title", i18nextNs: ["boardgame"] },
+    meta: { titleKey: "boardgame:title", i18nextNs: ["boardgame"] },
+  },
+  {
+    path: "/dye",
+    component: () => import("./views/dye.vue"),
+    name: "dye",
+    meta: { titleKey: "dye:title", i18nextNs: ["dye"] },
   },
 ];
