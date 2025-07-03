@@ -27,7 +27,7 @@
             :to="item.linkTarget"
             class="w-100"
           >
-            <LoadingPlaceholderImg
+            <!--<LoadingPlaceholderImg
               class="w-100"
               :src="item.img"
               :loading-src="''"
@@ -35,16 +35,29 @@
               :zoom-on-hover="true"
               :height="item.height"
               :width="item.width"
+            />-->
+            <responsive-img
+              :src="item.img"
+              class="w-100"
+              :alt="item.imgAlt"
+              :zoom-on-hover="true"
             />
           </RouterLink>
 
-          <LoadingPlaceholderImg
+          <responsive-img
+            v-else
+            :src="item.img"
+            class="w-100"
+            :alt="item.imgAlt"
+          />
+
+          <!--<LoadingPlaceholderImg
             v-else
             class="w-100"
             :src="item.img"
             :loading-src="item.loadingImg ?? ''"
             :alt="item.imgAlt"
-          />
+          />-->
         </div>
       </template>
     </div>
@@ -53,15 +66,34 @@
 
 <script lang="ts">
   import { watch } from "vue";
-  import LoadingPlaceholderImg from "../components/LoadingPlaceholderImg.vue";
+  import { type ImageData } from "@responsive-image/core";
 
-  const getImageUrl = (image: string): string =>
-    new URL(`../assets/img/${image}`, import.meta.url).href;
+  /* const getImageUrl = (image: string): string =>
+    new URL(`../assets/img/${image}`, import.meta.url).href;*/
+  import imgFusselbrie from "../assets/img/Fusselbrie-Masonry1.jpg?responsive";
+  import imgWelligDellig from "../assets/img/wellig-dellig-mockup-sm4.jpg?responsive";
+  import imgLinoKalender from "../assets/img/Linokalender-sm2.jpg?responsive";
+  import imgWildwuchs from "../assets/img/Wildwuchs-sm1.jpg?responsive";
+  import imgWimmelbild from "../assets/img/Wimmelbild01-farbe-sm2.jpg?responsive";
+  import imgHexe from "../assets/img/Hexe-glaze1.jpg?responsive";
+  import imgKaffee from "../assets/img/Kaffee-Verpackung.jpg?responsive";
+  import imgHochzeit from "../assets/img/Hochzeitseinladung-Mockup-Home.jpg?responsive";
+  import imgRiso from "../assets/img/Riso-glaze1.jpg?responsive";
+  import imgWaschtag from "../assets/img/Waschtag-glaze1.jpg?responsive";
+  import imgKraehe from "../assets/img/Kraehe-glaze2.jpg?responsive";
+  import imgHelp from "../assets/img/Help2.jpg?responsive";
+  import imgSkull from "../assets/img/skull1.gif";
+  import imgBett from "../assets/img/Bett-glaze2.jpg?responsive";
+  import imgFactence from "../assets/img/Factence-Diagramme1.gif";
+  import imgWillkommenWebcom from "../assets/img/Willkommenskarte_WebCom1.jpg?responsive";
+  import imgSmiley from "../assets/img/smiley.gif";
+  import imgBoardgame from "../assets/img/Boardgame-Thumbnail.png?responsive";
+  import imgDye from "../assets/img/Dye-Thumbnail.png?responsive";
+  import ResponsiveImg from "../components/ResponsiveImg.vue";
 
   export default {
     components: {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      LoadingPlaceholderImg,
+      ResponsiveImg,
     },
 
     data() {
@@ -70,8 +102,7 @@
         masonryEntries: [
           {
             uuid: "6aed85fa-43bd-4133-ac47-fbe08a5c9fb5",
-            img: getImageUrl("Fusselbrie-Masonry1.jpg"),
-            loadingImg: undefined,
+            img: imgFusselbrie,
             imgAlt: "Fusselbrie & Kabelsalat",
             linkTarget: { name: "fusselbriekabelsalat" },
             tags: ["booksComics", "illustration"],
@@ -80,8 +111,7 @@
           },
           {
             uuid: "b1f674e4-743d-4a07-8768-44f0dc696148",
-            img: getImageUrl("wellig-dellig-mockup4.jpg"),
-            loadingImg: getImageUrl("wellig-dellig-mockup-sm4.jpg"),
+            img: imgWelligDellig,
             imgAlt: "Wellig-dellig",
             linkTarget: { name: "welligdellig" },
             tags: ["booksComics", "graphicdesign-ux"],
@@ -90,8 +120,7 @@
           },
           {
             uuid: "3907fa6b-4ea4-4108-af6f-0c330f0d155c",
-            img: getImageUrl("Linokalender2.jpg"),
-            loadingImg: getImageUrl("Linokalender-sm2.jpg"),
+            img: imgLinoKalender,
             imgAlt: "Lino",
             linkTarget: { name: "linokalender" },
             tags: ["illustration"],
@@ -100,8 +129,7 @@
           },
           {
             uuid: "30ff5b86-89f7-45c7-9b41-2c6ff7dc6261",
-            img: getImageUrl("Wildwuchs1.jpg"),
-            loadingImg: getImageUrl("Wildwuchs-sm1.jpg"),
+            img: imgWildwuchs,
             imgAlt: "Wildwuchs",
             linkTarget: { name: "wildwuchs" },
             tags: ["motion"],
@@ -110,8 +138,7 @@
           },
           {
             uuid: "1965d346-b666-44c1-98f8-e99c34ae89ff",
-            img: getImageUrl("Wimmelbild01-farbe2.jpg"),
-            loadingImg: getImageUrl("Wimmelbild01-farbe-sm2.jpg"),
+            img: imgWimmelbild,
             imgAlt: "Wimmelbild",
             linkTarget: { name: "wimmelbild" },
             tags: ["illustration"],
@@ -120,8 +147,7 @@
           },
           {
             uuid: "103a6af7-eff4-4aee-88cb-4b7955226a7d",
-            img: getImageUrl("Hexe-glaze1.jpg"),
-            loadingImg: getImageUrl("Hexe-glaze-sm1.jpg"),
+            img: imgHexe,
             imgAlt: "Hexe",
             linkTarget: undefined,
             tags: ["illustration"],
@@ -130,8 +156,7 @@
           },
           {
             uuid: "bfb3b0ba-1ccc-42a0-854b-4a235cc29114",
-            img: getImageUrl("Kaffee-Verpackung.jpg"),
-            loadingImg: getImageUrl("Kaffee-Verpackung-sm.jpg"),
+            img: imgKaffee,
             imgAlt: "Kaffee",
             linkTarget: { name: "kaffeeverpackung" },
             tags: ["graphicdesign-ux"],
@@ -140,8 +165,7 @@
           },
           {
             uuid: "78316dab-331f-4d70-8f63-fc27fbbedbf3",
-            img: getImageUrl("Hochzeitseinladung-Mockup-Home.jpg"),
-            loadingImg: getImageUrl("Hochzeitseinladung-Mockup-Home-sm.jpg"),
+            img: imgHochzeit,
             imgAlt: "Speisekarte",
             linkTarget: { name: "speisekarte" },
             tags: ["graphicdesign-ux"],
@@ -150,8 +174,7 @@
           },
           {
             uuid: "103a6af7-eff4-4aee-88cb-4b7955226a7d",
-            img: getImageUrl("Riso-glaze1.jpg"),
-            loadingImg: getImageUrl("Riso-glaze-sm1.jpg"),
+            img: imgRiso,
             imgAlt: "Riso",
             linkTarget: undefined,
             tags: ["illustration"],
@@ -160,8 +183,7 @@
           },
           {
             uuid: "a11fa9ab-c7a5-4a9b-8339-a77f6f917109",
-            img: getImageUrl("Waschtag-glaze1.jpg"),
-            loadingImg: getImageUrl("Waschtag-glaze-sm1.jpg"),
+            img: imgWaschtag,
             imgAlt: "Waschtag",
             linkTarget: undefined,
             tags: ["illustration"],
@@ -170,8 +192,7 @@
           },
           {
             uuid: "1ab33658-e4a1-472a-b1bf-9e58fcc2d997",
-            img: getImageUrl("Kraehe-glaze2.jpg"),
-            loadingImg: getImageUrl("Kraehe-glaze-sm2.jpg"),
+            img: imgKraehe,
             imgAlt: "Kraehe",
             linkTarget: undefined,
             tags: ["illustration"],
@@ -180,8 +201,7 @@
           },
           {
             uuid: "f199519e-bd31-4a86-9e24-c529be4f4649",
-            img: getImageUrl("Help2.jpg"),
-            loadingImg: getImageUrl("Help-sm2.jpg"),
+            img: imgHelp,
             imgAlt: "Help",
             linkTarget: undefined,
             tags: ["illustration"],
@@ -190,8 +210,7 @@
           },
           {
             uuid: "0396d3dd-7190-4a7d-aae9-7373da883dc6",
-            img: getImageUrl("skull1.gif"),
-            loadingImg: getImageUrl("skull-sm1.gif"),
+            img: imgSkull,
             imgAlt: "skull",
             linkTarget: undefined,
             tags: ["motion"],
@@ -200,8 +219,7 @@
           },
           {
             uuid: "283389dc-af66-4b72-9e5a-869a30be59ab",
-            img: getImageUrl("Bett-glaze2.jpg"),
-            loadingImg: getImageUrl("Bett-glaze-sm2.jpg"),
+            img: imgBett,
             imgAlt: "Bett",
             linkTarget: undefined,
             tags: ["illustration"],
@@ -210,8 +228,7 @@
           },
           {
             uuid: "908ad917-1015-4464-81ce-7b112f0fa3a9",
-            img: getImageUrl("Factence-Diagramme1.gif"),
-            loadingImg: getImageUrl("Factence-Diagramme1.gif"),
+            img: imgFactence,
             imgAlt: "Factence",
             linkTarget: { name: "lotties" },
             tags: ["motion"],
@@ -220,8 +237,7 @@
           },
           {
             uuid: "a7a16def-fdef-4a98-84e9-6f0e4c7981b1",
-            img: getImageUrl("Willkommenskarte_WebCom1.jpg"),
-            loadingImg: getImageUrl("Willkommenskarte_WebCom_sm1.jpg"),
+            img: imgWillkommenWebcom,
             imgAlt: "Postkarten",
             linkTarget: { name: "postkarten" },
             tags: ["graphicdesign-ux"],
@@ -230,8 +246,7 @@
           },
           {
             uuid: "417a64b8-8a38-4c41-9b41-4c6b18d1d451",
-            img: getImageUrl("smiley.gif"),
-            loadingImg: getImageUrl("smiley.gif"),
+            img: imgSmiley,
             imgAlt: "Smiley",
             linkTarget: undefined,
             tags: ["motion"],
@@ -240,8 +255,7 @@
           },
           {
             uuid: "09f02748-039a-4c8e-8567-87d39bcc42ff",
-            img: getImageUrl("Boardgame-Thumbnail.png"),
-            loadingImg: getImageUrl("Boardgame-Thumbnail.png"),
+            img: imgBoardgame,
             imgAlt: "Boardgame",
             linkTarget: { name: "boardgame" },
             tags: ["motion"],
@@ -250,8 +264,7 @@
           },
           {
             uuid: "95125fce-ab15-4939-a816-55946080ce7f",
-            img: getImageUrl("Dye-Thumbnail.png"),
-            loadingImg: getImageUrl("Dye-Thumbnail.png"),
+            img: imgDye,
             imgAlt: "Dye",
             linkTarget: { name: "dye" },
             tags: ["motion"],

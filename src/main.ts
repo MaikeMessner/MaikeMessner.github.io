@@ -5,6 +5,7 @@ import "./styles/global.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import { createApp } from "vue";
+import "@responsive-image/wc";
 
 import I18NextVue from "i18next-vue";
 import i18next from "i18next";
