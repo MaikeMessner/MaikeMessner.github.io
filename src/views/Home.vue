@@ -66,10 +66,7 @@
 
 <script lang="ts">
   import { watch } from "vue";
-  import { type ImageData } from "@responsive-image/core";
 
-  /* const getImageUrl = (image: string): string =>
-    new URL(`../assets/img/${image}`, import.meta.url).href;*/
   import imgFusselbrie from "../assets/img/Fusselbrie-Masonry1.jpg?responsive";
   import imgWelligDellig from "../assets/img/wellig-dellig-mockup-sm4.jpg?responsive";
   import imgLinoKalender from "../assets/img/Linokalender-sm2.jpg?responsive";
@@ -93,6 +90,7 @@
 
   export default {
     components: {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       ResponsiveImg,
     },
 

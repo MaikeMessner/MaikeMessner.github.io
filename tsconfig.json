@@ -1,7 +1,5 @@
 {
-  "include": [
-    "./types/global.d.ts"
-  ],
+  "include": ["./types/global.d.ts"],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
