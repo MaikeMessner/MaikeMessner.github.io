@@ -1,11 +1,13 @@
 <script lang="ts">
-  const getImg = <T extends string | ImageData>(img: T) =>
+  import { type ImageData as ImgData } from "@responsive-image/core";
+
+  const getImg = <T extends string | ImgData>(img: T) =>
     typeof img === "string" ? new URL(img, import.meta.url).href : img;
 
   export default {
     props: {
       src: {
-        type: [String, ImageData],
+        type: Object as () => string | ImgData,
         required: true,
       },
       zoomOnHover: {
@@ -15,11 +17,10 @@
       },
     },
 
-    data() {
-      return {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-        img: getImg(this.$props.src),
-      };
+    computed: {
+      img() {
+        return getImg(this.src) as string | ImgData;
+      },
     },
   };
 </script>
