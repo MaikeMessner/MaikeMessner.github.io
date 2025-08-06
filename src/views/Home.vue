@@ -85,7 +85,7 @@
   import imgWillkommenWebcom from "../assets/img/Willkommenskarte_WebCom1.jpg?responsive";
   import imgSmiley from "../assets/img/smiley.gif";
   import imgBoardgame from "../assets/img/Boardgame-Thumbnail.png?responsive";
-  import imgDye from "../assets/img/Dye-Thumbnail.png?responsive";
+  import imgDye from "../assets/img/Dye-Thumbnail-crop.png?responsive";
   import ResponsiveImg from "../components/ResponsiveImg.vue";
 
   export default {
